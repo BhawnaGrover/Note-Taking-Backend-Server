@@ -6,17 +6,18 @@ Below is a minimal API documentation for your note-taking backend server. The se
 - Endpoint: POST /api/auth/signup
 - Description: Register a new user.
 - Request:
-- - Body:
+  - Body:
 json
-Copy code
+```
 {
   "username": "newUser",
   "email": "newuser@example.com",
   "password": "securePassword"
 }
-Response:
+```
+  - Response:
 json
-Copy code
+```
 {
   "message": "User registered successfully",
   "body": {
@@ -29,20 +30,22 @@ Copy code
     "__v": 0
   }
 }
+```
 # User Signin
-Endpoint: POST /api/auth/signin
-Description: Authenticate an existing user.
-Request:
-Body:
+- Endpoint: POST /api/auth/signin
+- Description: Authenticate an existing user.
+- Request:
+  - Body:
 json
-Copy code
+```
 {
   "username": "existingUser",
   "password": "securePassword"
 }
-Response:
+```
+  - Response:
 json
-Copy code
+```
 {
   "message": "User signin successfully",
   "user": {
@@ -56,6 +59,7 @@ Copy code
     "token": "jwtToken"
   }
 }
+```
 Note: For the /signup and /signin endpoints, the token (jwtToken) returned in the response should be included in the x-auth-token header for subsequent requests that require authentication.
 
 
