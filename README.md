@@ -6,16 +6,16 @@ Below is a minimal API documentation for your note-taking backend server. This a
 ### - Endpoint: POST /api/task/add
 ### - Description: Add a new todo for a user.
 ### - Request:
-        - Headers:
-            - x-auth-token (Authentication token)
-        - Body:
+- Headers:
+- x-auth-token (Authentication token)
+- Body:
 ```
-        {
+{
   "title": "My Task",
   "task": "Complete the task"
 }
 ```
-        - Response:
+- Response:
 ```
 {
   "message": "Todo added successfully",
