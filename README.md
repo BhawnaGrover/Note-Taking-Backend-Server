@@ -1,6 +1,64 @@
 # Note-Taking-Backend-Server
 
-Below is a minimal API documentation for your note-taking backend server. This assumes that your server is deployed at [https://note-taking-backend-server.vercel.app/]. Replace :todoId with the actual ID of the todo you want to interact with.
+Below is a minimal API documentation for your note-taking backend server. The server is deployed at [https://note-taking-backend-server.vercel.app/]. Replace :todoId with the actual ID of the todo you want to interact with.
+
+# User Signup
+- Endpoint: POST /api/auth/signup
+- Description: Register a new user.
+- Request:
+- - Body:
+json
+Copy code
+{
+  "username": "newUser",
+  "email": "newuser@example.com",
+  "password": "securePassword"
+}
+Response:
+json
+Copy code
+{
+  "message": "User registered successfully",
+  "body": {
+    "_id": "userId",
+    "username": "newUser",
+    "email": "newuser@example.com",
+    "todos": [],
+    "createdAt": "timestamp",
+    "updatedAt": "timestamp",
+    "__v": 0
+  }
+}
+# User Signin
+Endpoint: POST /api/auth/signin
+Description: Authenticate an existing user.
+Request:
+Body:
+json
+Copy code
+{
+  "username": "existingUser",
+  "password": "securePassword"
+}
+Response:
+json
+Copy code
+{
+  "message": "User signin successfully",
+  "user": {
+    "_id": "userId",
+    "username": "existingUser",
+    "email": "existinguser@example.com",
+    "todos": [],
+    "createdAt": "timestamp",
+    "updatedAt": "timestamp",
+    "__v": 0,
+    "token": "jwtToken"
+  }
+}
+Note: For the /signup and /signin endpoints, the token (jwtToken) returned in the response should be included in the x-auth-token header for subsequent requests that require authentication.
+
+
 
 ## 1. Add a new todo
 ### - Endpoint: POST /api/task/add
