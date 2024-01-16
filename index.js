@@ -13,8 +13,8 @@ app
     cors({
       origin: [
         "http://localhost:3000",
-        "https://dictionary-server-six.vercel.app",
-        "https://dictionary.srijansamridh.tech",
+        "https://note-taking-backend-server.vercel.app",
+        "https://note-taking-backend-server-bhawna-s-projects.vercel.app",
         "http://127.0.0.1:5500",
       ],
       credentials: true,
