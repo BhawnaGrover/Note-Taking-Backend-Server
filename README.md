@@ -3,7 +3,10 @@
 Below is a minimal API documentation for your note-taking backend server. The server is deployed at https://note-taking-backend-server.vercel.app/. Replace :todoId with the actual ID of the todo you want to interact with.
 
 # User Signup
-- Endpoint: POST /api/auth/signup
+- Endpoint: POST
+  ```
+  https://note-taking-backend-server.vercel.app/api/auth/signup
+  ```
 - Description: Register a new user.
 - Request:
   - Body:
@@ -32,7 +35,10 @@ json
 }
 ```
 # User Signin
-- Endpoint: POST /api/auth/signin
+- Endpoint: POST
+```
+  https://note-taking-backend-server.vercel.app/api/auth/signin
+```
 - Description: Authenticate an existing user.
 - Request:
   - Body:
@@ -65,7 +71,10 @@ Note: For the /signup and /signin endpoints, the token (jwtToken) returned in th
 
 
 ## 1. Add a new todo
-### - Endpoint: POST /api/task/add
+### - Endpoint: POST 
+```
+https://note-taking-backend-server.vercel.app/api/task/add
+```
 ### - Description: Add a new todo for a user.
 ### - Request:
 - Headers:
@@ -87,7 +96,10 @@ Note: For the /signup and /signin endpoints, the token (jwtToken) returned in th
 }
 ```
 ## 2. Get all todos for a user
-### - Endpoint: GET /api/task/all
+### - Endpoint: GET 
+```
+https://note-taking-backend-server.vercel.app/api/task/all
+```
 ### - Description: Get all todos for the authenticated user.
 ### - Request:
 - Headers:
@@ -109,7 +121,10 @@ json
 }
 ```
 ## 3. Update a specific todo
-### - Endpoint: PUT /api/task/:todoId
+### - Endpoint: PUT 
+```
+https://note-taking-backend-server.vercel.app/api/task/:todoId
+```
 ### - Description: Update a specific todo for the authenticated user.
 ### - Request:
 - Headers:
@@ -134,7 +149,10 @@ json
 }
 ```
 ## 4. Delete a specific todo
-### - Endpoint: DELETE /api/task/:todoId
+### - Endpoint: DELETE 
+```
+https://note-taking-backend-server.vercel.app/api/task/:todoId
+```
 ### - Description: Delete a specific todo for the authenticated user.
 ### - Request:
 - Headers:
