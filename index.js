@@ -15,6 +15,7 @@ app
         "http://localhost:3000",
         "https://note-taking-backend-server.vercel.app",
         "https://note-taking-backend-server-bhawna-s-projects.vercel.app",
+        "https://note-taking-app-bice-eight.vercel.app",
         "http://127.0.0.1:5500",
       ],
       credentials: true,
